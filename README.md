@@ -1,2 +1,3 @@
 # tidyveRcpp
-Docker rocker/r-base with devtools, tidyverse, Rcpp, RcppArmadillo and dependencies
+
+Based on rocker/r-base, with devtools, tidyverse (ggplot2, dplyr, ...), Rcpp, RcppArmadillo and dependencies
