@@ -10,7 +10,8 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
   libcurl4-openssl-dev \
   libxml2-dev \
   libssh2-1-dev \
-  libssl-dev
+  libssl-dev \
+  libmariadb-client-lgpl-dev
 RUN R -e "source('https://bioconductor.org/biocLite.R')" && install2.r --error --deps TRUE \
     Rcpp \
     RcppArmadillo \
