@@ -1,7 +1,7 @@
 FROM rocker/r-base:latest
 LABEL maintainer="lorenzo.gaborini@gmail.com"
 
-## tidyveRcpp
+## tidyveRcpp-mini
 ## rocker/r-base:latest with devtools, tidyverse, Rcpp, RcppArmadillo and dependencies
 ## 
 ## Base Dockerfile from rocker/tidyverse
@@ -13,7 +13,9 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
   libmariadbd-dev \
   libmariadb-client-lgpl-dev \
   libpq-dev \
-  libssh2-1-dev
+  libssh2-1-dev \
+  libcurl4-openssl-dev \
+  libssl-dev
 RUN R -e "source('https://bioconductor.org/biocLite.R')" \
   && install2.r --error \
     --deps TRUE \
