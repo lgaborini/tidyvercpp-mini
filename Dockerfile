@@ -25,6 +25,15 @@ RUN R -e "source('https://bioconductor.org/biocLite.R')" \
     devtools \
     formatR \
     remotes
+RUN apt-get purge -y -qq libxml2-dev \
+    libcairo2-dev \
+    libsqlite-dev \
+    libmariadbd-dev \
+    libmariadb-client-lgpl-dev \
+    libpq-dev \
+    libssh2-1-dev \
+    libcurl4-openssl-dev \
+    libssl-dev
 
 ## Notes: Above install2.r uses --deps TRUE to get Suggests dependencies as well,
 ## dplyr and ggplot are already part of tidyverse, but listed explicitly to get their (many) suggested dependencies.
