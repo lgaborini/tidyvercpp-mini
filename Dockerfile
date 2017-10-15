@@ -1,9 +1,9 @@
 FROM rocker/r-base:latest
 LABEL maintainer="lorenzo.gaborini@gmail.com"
 
-## tidyveRcpp-mini
+## tidyvercpp-mini
 ## rocker/r-base:latest with devtools, tidyverse, Rcpp, RcppArmadillo and dependencies
-## 
+##
 ## Base Dockerfile from rocker/tidyverse
 
 RUN apt-get update -qq && apt-get -y --no-install-recommends install \
