@@ -15,8 +15,8 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
   libpq-dev \
   libssh2-1-dev \
   libcurl4-openssl-dev \
-  libssl-dev
-RUN R -e "source('https://bioconductor.org/biocLite.R')" \
+  libssl-dev && \
+  R -e "source('https://bioconductor.org/biocLite.R')" \
   && install2.r --error \
     --deps TRUE \
     tidyverse \
@@ -24,8 +24,9 @@ RUN R -e "source('https://bioconductor.org/biocLite.R')" \
     ggplot2 \
     devtools \
     formatR \
-    remotes
-RUN apt-get purge -y -qq libxml2-dev \
+    remotes \
+  && apt-get purge -y -qq \
+    libxml2-dev \
     libcairo2-dev \
     libsqlite-dev \
     libmariadbd-dev \
