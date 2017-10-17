@@ -37,7 +37,7 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
     libssl-dev \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/ \
-  && rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
+  && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
 ## Notes: Above install2.r uses --deps TRUE to get Suggests dependencies as well,
 ## dplyr and ggplot are already part of tidyverse, but listed explicitly to get their (many) suggested dependencies.
