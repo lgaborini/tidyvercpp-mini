@@ -25,7 +25,6 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
     devtools \
     formatR \
     remotes \
-    remotes \
     Rcpp \
     RcppArmadillo \
   && apt-get purge -y -qq \
