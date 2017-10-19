@@ -24,7 +24,9 @@ RUN R -e "source('https://bioconductor.org/biocLite.R')" \
     ggplot2 \
     devtools \
     formatR \
-    remotes
+    remotes \
+    Rcpp \
+    RcppArmadillo
 
 ## Notes: Above install2.r uses --deps TRUE to get Suggests dependencies as well,
 ## dplyr and ggplot are already part of tidyverse, but listed explicitly to get their (many) suggested dependencies.
