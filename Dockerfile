@@ -23,8 +23,8 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
     dplyr \
     ggplot2 \
     devtools \
-    formatR \
     remotes \
+  && install2.r --error \
     Rcpp \
     RcppArmadillo \
   && apt-get purge -y -qq \
@@ -44,5 +44,4 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
 ## Notes: Above install2.r uses --deps TRUE to get Suggests dependencies as well,
 ## dplyr and ggplot are already part of tidyverse, but listed explicitly to get their (many) suggested dependencies.
 ## In addition to the the title 'tidyverse' packages, devtools is included for package development.
-## RStudio wants formatR for rmarkdown, even though it's not suggested.
 ## remotes included for installation from heterogenous sources including git/svn, local, url, and specific cran versions
