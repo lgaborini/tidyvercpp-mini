@@ -23,8 +23,8 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
     dplyr \
     ggplot2 \
     devtools \
-    remotes \
-  && install2.r --error \
+    remotes
+RUN install2.r --error \
     Rcpp \
     RcppArmadillo
 
