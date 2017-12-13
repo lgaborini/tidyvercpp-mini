@@ -15,6 +15,7 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
   libpq-dev \
   libssh2-1-dev \
   libcurl4-openssl-dev \
+  libglib2.0-dev \
   libssl-dev \
   && R -e "source('https://bioconductor.org/biocLite.R')" \
   && install2.r --error \
